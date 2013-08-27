@@ -30,7 +30,7 @@ module ActiveMerchant #:nodoc:
     # This hash keeps the errors of the object
     class Errors < HashWithIndifferentAccess
 
-      def initialize(base)
+      def initialize(base = {})
         super() { |h, k|  h[k] = [] ; h[k] }
         @base = base
       end
